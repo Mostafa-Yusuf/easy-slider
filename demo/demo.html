@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Styles -->
+    <style>
+      body,ul{
+        margin: 0;
+        padding: 0;
+      }
+      .col-xs-12 {
+          width: 100%;
+        }
+        .mySlides {
+            display: none;
+            overflow: hidden;
+            max-height: 700px;
+        }
+        .main-ad-slides img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+          height: auto;
+        }
+        .dot-container {
+            text-align: center;
+            height: 0;
+        }
+        .dot {
+              cursor: pointer;
+              height: 11px;
+              width: 11px;
+              background-color: #D8D8D8;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+              position: relative;
+              top: -30px;
+            }
+        .dot.active, .dot:hover {
+            background-color: #79CCCC;
+        }
+    </style>
+</head>
+<body>
+
+  <div class="col-xs-12">
+				<div id="main-slider">
+							<ul class="slideshow-container">
+								<li class="mySlides main-ad-slides" data-time="5000">
+						        <a class="" href="#" >
+											<img class="img-responsive center-block " alt="laguna"  src="https://cdn.pixabay.com/photo/2020/03/03/20/31/laguna-4899802_960_720.jpg"  />
+										</a>
+								</li>
+                <li class="mySlides main-ad-slides" data-time="5000">
+						        <a class="" href="#" >
+											<img class="img-responsive center-block " alt="seal"  src="https://cdn.pixabay.com/photo/2020/03/11/21/06/seal-4923333_960_720.jpg"  />
+										</a>
+								</li>
+              </ul>
+               <div class="dot-container">
+             			  <span class="dot" onclick="currentSlide(1, 'mySlides', 'dot')"></span>
+             			  <span class="dot" onclick="currentSlide(2, 'mySlides', 'dot')"></span>
+					 			</div>
+				</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+<script src="../slider.js"></script>
+<script>
+jQuery(function(){
+	new H2O.slider({sliderID: "#main-slider", slideClass:".mySlides", dotClass:".dot"});
+});
+</script>
